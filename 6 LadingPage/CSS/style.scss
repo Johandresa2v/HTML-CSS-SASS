@@ -1,0 +1,179 @@
+//Formatear documento
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.main{
+    position: relative;
+    min-height: 100vh;
+    background: radial-gradient(#ee3921,#FF0029);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 100px;
+    header{
+        min-width: 100%;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        .logo{
+            max-width: 130px;
+        }
+        .navigation{
+            display: flex;
+            margin-right: 30px;
+            li{
+                list-style: none;
+                a{
+                    position: relative;
+                    color: #fff;
+                    text-decoration: none;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+    .content{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .text{
+            width: 100%;
+            max-width: 600px;
+            h2{
+                color: #fff;
+                font-size: 5em;
+                font-weight: 300px;
+                line-height: 1.1em;
+                margin: 20px 0;
+                span{
+                    font-weight: 700;
+                }
+            }
+            p{
+                color: white;
+                font-weight: 400;
+                font-size: 1.1em;
+                line-height: 1.5em;
+                margin: 20px 0;
+            }
+            .btn{
+                position: relative;
+                display: inline-block;
+                padding: 20px 50px;
+                background-color: #fff;
+                color: #333;
+                font-size: 1.1em;
+                font-weight: 500;
+                text-decoration: none;
+                border-radius: 40px;
+                transition: 0.25s;
+                &:hover{
+                    letter-spacing: 2px;
+                }
+            }
+        }
+        .content-img{
+            position: relative;
+            .imgMuestra{
+                display: block;
+                img{
+                    width: 100%;
+                    max-width: 600px;
+                }
+            }
+        }
+    }
+    .footer{
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        padding: 30px 100px;
+        justify-content: space-between;
+        align-items: flex-end;
+        .sci{
+            display: flex;
+            li{
+                list-style: none;
+                a{
+                    color: white;
+                    font-size: 2em;
+                    margin-right: 20px;
+                    display: inline-block;
+                    transition: 0.25s;
+                    &:hover{
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:920px){
+    .main{
+    padding: 15px;
+    .content{
+        .text{
+            h2{
+                margin-top: 80px;
+            }
+        }
+    }
+    .content-img{
+        .imgMuestra{
+            width: 110%;
+            position: relative;
+            right: 3vh;
+        }
+    }
+    }
+    .footer{
+        flex-direction: row-reverse;
+        align-items: center;
+        .sci{
+            margin-top: 40px;
+            margin-right: -80px;
+        }
+    }
+}
+
+@media (max-width:600px){
+    .main{
+    padding: 20px;
+    .content{
+        .text{
+            h2{
+                margin-top: 80px;
+            }
+        }
+    }
+    .content-img{
+        .imgMuestra{
+            width: 120%;
+            position: relative;
+            right: 4vh;
+        }
+    }
+    }
+    .footer{
+        flex-direction: row-reverse;
+        align-items: center;
+        .sci{
+            margin-top: 40px;
+            margin-right: -80px;
+        }
+    }
+}

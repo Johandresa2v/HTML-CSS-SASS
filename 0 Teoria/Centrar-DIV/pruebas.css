@@ -1,0 +1,61 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container {
+    background: rgb(43, 41, 41);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.padre {
+    background: purple;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+}
+
+.hijo {
+    width: 200px;
+    height: 200px;
+    border-radius: 19px;
+    background: orange;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nieto {
+    height: 100px;
+    width: 100px;
+    background: seagreen;
+    border-radius: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bisnieto {
+    width: 50px;
+    height: 50px;
+    border-radius: 19px;
+    background: rgb(179, 17, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tataranieto {
+    width: 25px;
+    height: 25px;
+    background: black;
+    border-radius: 19px;
+}

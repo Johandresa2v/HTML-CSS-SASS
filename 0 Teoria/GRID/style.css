@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;/* se fracciona 1 por una */
+    grid-template-rows: repeat(5,1fr); /*se fraccionar con mas reducido*/
+    row-gap: 4px;/*espacio entre filas */
+    column-gap: 2px; 
+    grid-template-areas: 
+        "a1 a1 a1 a2 a2"
+        "a1 a1 a1 a2 a2"
+        "a3 a3 a3 a2 a2"
+        "a3 a3 a3 a2 a2"
+        "a4 a4 a4 a4 a4"
+    ;
+}
+section{
+    /* width: 100px;
+    height: 100px; */
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.caja1{
+    background-color: rgb(219, 219, 56);
+    grid-area: a1;
+}
+.caja2{
+    background-color: rgb(86, 86, 250);
+    grid-area: a2;
+}
+.caja3{
+    background-color: rgb(207, 62, 62);
+    grid-area: a3;
+}
+.caja4{
+    background-color: rgb(190, 41, 190);
+    grid-area: a4;
+}
+
+@media(max-width: 700px) {
+    .container {
+        grid-template-areas:
+            "a1 a1 a1 a2 a2"
+            "a1 a1 a1 a2 a2"
+            "a3 a3 a3 a2 a2"
+            "a4 a4 a4 a4 a4"
+            "a4 a4 a4 a4 a4"
+        ;
+    }
+}

@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: #000;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 100px;
+    z-index: 100;
+    .logo img{
+        max-width: 150px;
+    }
+}
+.navigation{
+    display: flex;
+    li{
+        list-style: none;
+        margin: 0 10px;
+        a{
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        &:hover a{
+            color: #de0611;
+        }
+    }
+}
+.search{
+    position: relative;
+    width: 300px;
+    height: 40px;
+    input{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        color: white;
+        background: transparent;
+        border: 1px solid rgb(255, 255, 255, 0.5);
+        outline: none;
+        border-radius: 4px;
+        padding: 0 10px 0 45px;
+        backdrop-filter: blur(10px);
+        &::placeholder{
+            color: #fff;
+        }
+    }
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    .bg{
+        position: absolute;--------------video 4 minuto 6--------------- 
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 600px){
+    header{
+        padding: 20px;
+    }
+    .search{
+        position: relative;
+        width: calc(100% -20px);
+        height: 40px;
+    }
+}

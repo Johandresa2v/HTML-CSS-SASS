@@ -1,0 +1,92 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background: aquamarine;
+}
+
+.imagenes-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.titulo-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 25vh;
+}
+
+.imagenes-container .imagen{
+    position: relative;
+    margin-right: -30px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.imagenes-container .imagen img {
+    width: 150px;
+    height: 150px;
+    transition: transform 0.32s ease-in-out;
+}
+
+.imagenes-container .imagen .nombre{
+    position: absolute;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -70px;
+    padding: 10px 15px;
+}
+
+.imagenes-container .imagen:hover .nombre {
+    display: flex;
+    transform: translateY(-20px);
+}
+
+.imagenes-container .imagen:hover .nombre .text{
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.imagenes-container .imagen .nombre::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;
+    /* creo un triangulo con estas 3 lineas de codigo */
+    border-top: solid 10px black;
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
+}
+
+/*ANIMACIONES*/
+
+.imagenes-container .imagen:hover img {
+    transform: translateY(-20px);
+}
+
+@media (max-width: 600px){
+    .imagenes-container{
+        flex-direction: column;
+        height: 180vh;
+    }
+    .titulo-container{
+        height: 32vh;
+        text-align: center;
+    }
+}

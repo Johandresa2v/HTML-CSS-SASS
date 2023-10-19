@@ -1,0 +1,39 @@
+.padre{
+    width: 200px;
+    height: 200px;
+    background: green;
+    left: 200px;
+    position: relative;
+}
+
+.hijo {
+    width: 50px;
+    height: 50px;
+    background: rgb(0, 140, 255);
+    position: absolute;
+    left: 20px;
+    top: 50px;
+
+}
+
+.box{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: red;
+    color: white;
+}
+
+#dos{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    background: green;
+}
+
+#cuatro{
+    position: absolute;
+    top: 350px;
+    left: 20px;
+    background: rgb(21, 94, 252);
+}
